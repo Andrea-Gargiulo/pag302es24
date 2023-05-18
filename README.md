@@ -7,14 +7,13 @@ FORMATTAZIONE:
 tipoDiOperazione;descrizione;importo;quantità;opCode
 char;String;int;float;int
 
-  public String[] getOperazioniDiTipo(char tipo) {
-        LinkedList<String> daRestituire = new LinkedList<>();
-        try {
-            String line;
-            while ((line = reader.readLine()) != null) { // Supponendo che "reader" sia attributo della classe "Terminale"
-                String[] operazione = line.split(";"); 
-
-                if (operazione.length > 0 && operazione[0].charAt(0) == tipo) {
+public String[] getOperazioniDiTipo(char tipo) {
+  LinkedList<String> daRestituire = new LinkedList<>();
+    try{
+    String line;
+    while ((line = reader.readLine()) != null) { // Supponendo che "reader" sia attributo della classe "Terminale"
+      String[] operazione = line.split(";");
+     if (operazione.length > 0 && operazione[0].charAt(0) == tipo) {
                     daRestituire.add(line);
                 }
             }
