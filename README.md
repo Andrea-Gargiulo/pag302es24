@@ -9,7 +9,6 @@ char;String;int;float;int
 
   public String[] getOperazioniDiTipo(char tipo) {
         LinkedList<String> daRestituire = new LinkedList<>();
-
         try {
             String line;
             while ((line = reader.readLine()) != null) { // Supponendo che "reader" sia attributo della classe "Terminale"
